@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+}
+
+/* flex-structure */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01285f;
+    padding: 10px 50px;
+}
+
+/* imgs */
+
+nav img {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.hero img {
+    height: 100%;
+}
+
+/* list */
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    height: 100%;
+}
+
+/* links */
+
+li a {
+    text-decoration: none;
+    color: white;
+    padding: 19px;
+}
+
+li a:hover {
+    background-color: rgb(1, 17, 70);
+}
