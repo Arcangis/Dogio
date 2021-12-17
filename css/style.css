@@ -1,18 +1,188 @@
-body {
-    display: flex;
-    flex-flow: column;
-    margin: 0;
+/*------------------------------------- TO DO -------------------------------------
+
+* fix hero's zoom out: content goes to the sides
+* fix hero's zoom in text: makes the text too thin and long while the image is colossal.
+
+
+*/
+
+
+
+html {
+    /* add background for the whole page, inclusive the part after the footer when zoomed-out */
+    background-color: red;
 }
 
-/* flex-structure */
+body {
+    margin: 0;
+    font-family: georgia, verdana, sans-serif;
+}
+
+/*---------------------------------------------- flex-structure -----------------------------------------*/
+
+/* navigator */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #01285f;
-    padding: 10px 50px;
+    background-color: #1f2937;
+    padding: 10px 100px;
 }
+
+/* content wrapper */
+
+.wrapper-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: space-between;
+}
+
+/* hero */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 30px;
+    background-color: #1f2937;
+    color: white;
+    padding: 80px 100px;
+}
+
+.hero div {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #f9faf8;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+/* services */
+
+.services {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 100px;
+    padding-bottom: 80px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+
+.services p {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.services-container p {
+    font-size: 20px;
+    font-weight: normal;
+    color: #1f2937;
+    text-align: center;
+    max-width: 200px;
+    margin: 0;
+}
+
+/* mission */
+
+.mission{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #e5e7eb;
+    padding: 80px;
+    padding-bottom: 40px
+}
+
+.mission q {
+    align-self: center;
+    font-style: italic;
+    font-size: 36px;
+    color: #1f2937;
+}
+
+.mission p {
+    font-size: 18px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/* call to action */
+
+.call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 80px;
+}
+
+.window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #3882f6; 
+    padding: 20px 80px;
+}
+
+.window h2 {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.window p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: #1f2937;
+    padding: 15px;
+}
+
+.footer p {
+    margin: 5px;
+}
+
+/*----------------------------------------- gadgets ---------------------------------------- */
 
 /* imgs */
 
@@ -20,11 +190,23 @@ nav img {
     height: 30px;
     width: auto;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid #e5e7eb;
 }
 
 .hero img {
-    height: 100%;
+    flex: 1 1 auto;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.services img {
+    flex: 1 1 auto;
+    border-radius: 25%;
+    border: 5px solid #3882f6;
+    max-height: 200px;
+    max-width: 200px;
+
 }
 
 /* list */
@@ -34,18 +216,46 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    gap: 30px;
     height: 100%;
 }
 
 /* links */
 
-li a {
+a {
     text-decoration: none;
-    color: white;
-    padding: 19px;
+    color: #f9faf8;
+}
+
+li a {
+    font-size: 20px;
+    padding: 19px 30px;
 }
 
 li a:hover {
-    background-color: rgb(1, 17, 70);
+    background-color: rgb(0, 10, 41);
+}
+
+/* buttons */
+
+button {
+    width: 120px;
+    max-width: 120px;
+    font-weight: 900;
+    color: white;
+    background-color: #3882f6;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    /*  text won't break a line */
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: rgb(0, 35, 139);
+}
+
+.call button {
+    border: 3px solid #fff;
+    padding: 10px 30px;
 }
