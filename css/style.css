@@ -10,7 +10,7 @@
 
 html {
     /* add background for the whole page, inclusive the part after the footer when zoomed-out */
-    background-color: red;
+    background-color: #1f2937;
 }
 
 body {
@@ -48,15 +48,15 @@ nav {
     flex: 1 1 auto;
     gap: 30px;
     background-color: #1f2937;
-    color: white;
     padding: 80px 100px;
 }
 
 .hero div {
     display: flex;
     flex-flow: column;
-    flex: 1 1 auto;
-    justify-content: center;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .hero h1 {
@@ -66,6 +66,7 @@ nav {
 }
 
 .hero p {
+    max-width: 800px;
     font-size: 18px;
     color: #e5e7eb;
 }
@@ -196,8 +197,7 @@ nav img {
 .hero img {
     flex: 1 1 auto;
     max-width: 400px;
-    width: 100%;
-    margin: auto;
+    height: auto;
 }
 
 .services img {
