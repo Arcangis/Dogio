@@ -1,13 +1,3 @@
-/*------------------------------------- TO DO -------------------------------------
-
-* fix hero's zoom out: content goes to the sides
-* fix hero's zoom in text: makes the text too thin and long while the image is colossal.
-
-
-*/
-
-
-
 html {
     /* add background for the whole page, inclusive the part after the footer when zoomed-out */
     background-color: #1f2937;
@@ -43,6 +33,7 @@ nav {
 
 .hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
@@ -67,6 +58,7 @@ nav {
 
 .hero p {
     max-width: 800px;
+    min-width: 450px;
     font-size: 18px;
     color: #e5e7eb;
 }
