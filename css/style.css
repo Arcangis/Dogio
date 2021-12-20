@@ -42,7 +42,7 @@ nav {
     padding: 80px 100px;
 }
 
-.hero div {
+.hero-text {
     display: flex;
     flex-flow: column;
     justify-content:center;
@@ -50,17 +50,30 @@ nav {
     gap: 20px;
 }
 
-.hero h1 {
+.hero-image {
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.hero-text h1 {
     margin: 0;
     font-size: 48px;
     color: #f9faf8;
 }
 
-.hero p {
-    max-width: 800px;
+.hero-text p {
+    max-width: 700px;
     min-width: 450px;
     font-size: 18px;
     color: #e5e7eb;
+    /* vertical space between lines of text*/
+    line-height: 25px;
+}
+
+.hero-image p{
+    color: #fff;
 }
 
 /* services */
@@ -101,9 +114,9 @@ nav {
     margin: 0;
 }
 
-/* mission */
+/* quote */
 
-.mission{
+.quote{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -112,14 +125,18 @@ nav {
     padding-bottom: 40px
 }
 
-.mission q {
+.quote q {
     align-self: center;
     font-style: italic;
-    font-size: 36px;
+    font-size: 28px;
     color: #1f2937;
 }
 
-.mission p {
+.line-through {
+    text-decoration: line-through;
+}
+
+.quote p {
     font-size: 18px;
     font-weight: bold;
     align-self: flex-end;
@@ -188,14 +205,19 @@ nav img {
 
 .hero img {
     flex: 1 1 auto;
-    max-width: 400px;
+    max-width: 200px;
     height: auto;
+    /* add custom border to the image */ 
+    border: 30px solid transparent;
+    border-image: url(../images/image-border.png) 20% round;
 }
 
 .services img {
     flex: 1 1 auto;
     border-radius: 25%;
     border: 5px solid #3882f6;
+    height: 200px;
+    width: 200px;
     max-height: 200px;
     max-width: 200px;
 
@@ -249,5 +271,5 @@ button:hover {
 
 .call button {
     border: 3px solid #fff;
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
